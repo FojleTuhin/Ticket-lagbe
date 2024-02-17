@@ -19,3 +19,18 @@ body {
 .bus-color{
     color: #1DD100;
 }
+
+.seat{
+    background: #F7F8F8;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(3, 7, 18, 0.50);
+    padding: 17px 40px 17px 40px;
+}
+
+.rows{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
