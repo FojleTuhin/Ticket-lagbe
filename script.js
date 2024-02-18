@@ -107,6 +107,9 @@ function apply() {
 function then(){
   const home= document.getElementById('hello');
   home.classList.add('hidden');
+
+  const continues= document.getElementById('Continue');
+  continues.classList.remove('hidden');
 }
 
 
