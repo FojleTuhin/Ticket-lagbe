@@ -109,10 +109,7 @@ function then(){
   home.classList.add('hidden');
 }
 
-function continues(){
-  const home= document.getElementById('hello');
-  home.classList.remove('hidden');
-}
+
 
 
 const seatElements = document.querySelectorAll('p[class^=seat]'); 
