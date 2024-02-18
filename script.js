@@ -115,9 +115,6 @@ function continues(){
 }
 
 
-
-
-
 const seatElements = document.querySelectorAll('p[class^=seat]'); 
 const numberInput = document.getElementById('number');
 const submitBtn = document.getElementById('next');
