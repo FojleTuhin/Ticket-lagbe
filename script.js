@@ -50,7 +50,10 @@ for (const seat of allSeat) {
         alert("Sorry, You can't buy 5 or more ticket");
       }
     }
+
+ 
   })
+ 
 }
 
 
@@ -110,3 +113,43 @@ function continues(){
   const home= document.getElementById('hello');
   home.classList.remove('hidden');
 }
+
+
+
+
+
+const seatElements = document.querySelectorAll('p[class^=seat]'); 
+const numberInput = document.getElementById('number');
+const submitBtn = document.getElementById('next');
+
+let selectedSeat = null; 
+
+seatElements.forEach(seatElement => {
+  seatElement.addEventListener('click', () => {
+    
+    if (selectedSeat) {
+      selectedSeat.classList.remove('selected');
+    }
+    
+    seatElement.classList.add('selected');
+    selectedSeat = seatElement;
+    updateSubmitButton(); 
+  });
+});
+
+function updateSubmitButton() {
+  const numberValue = numberInput.value.trim();
+
+  
+  if (numberValue === '' || isNaN(Number(numberValue))) {
+    submitBtn.disabled = true;
+    return; 
+  }
+
+
+  submitBtn.disabled = !selectedSeat; 
+}
+
+numberInput.addEventListener('input', updateSubmitButton);
+
+updateSubmitButton();
