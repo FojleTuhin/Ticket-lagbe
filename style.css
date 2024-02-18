@@ -34,3 +34,10 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+.upcoming-price{
+    display: flex;
+    justify-content: space-between;
+}
+
+.upcoming-price 
