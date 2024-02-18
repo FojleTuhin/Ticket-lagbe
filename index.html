@@ -302,16 +302,22 @@
                                     <p class="font-medium">BDT <span class="font-medium" id="total-price">0</span></p>
                                 </div>
 
-                                <div class="bg-white rounded-md flex justify-between p-2 mt-4">
-                                    <input type="text" placeholder="Have any copupon?" class="pl-2">
-                                    <button class="btn rounded-xl bg-[#1DD100] font-semibold text-white">Apply</button>
+                                <div class="bg-white rounded-md flex justify-between p-2 mt-4 " id="Coupon-btn">
+                                    <input type="text" placeholder="Have any copupon?" class="pl-2" id="input">
+                                    <button class="btn rounded-xl bg-[#1DD100] font-semibold text-white" id="Apply" onclick="apply()">Apply</button>
 
                                 </div>
 
                                 <div class="flex justify-between mt-6">
-                                    <p class="font-medium">Grand Total</p>
-                                    <p class="font-medium">BDT <span class="font-medium">0</span></p>
+                                    <p class="font-medium">Discount</p>
+                                    <p class="font-medium">BDT <span class="font-medium" id="discount">0</span></p>
                                 </div>
+
+                                <div class="flex justify-between mt-6">
+                                    <p class="font-medium">Grand Total</p>
+                                    <p class="font-medium">BDT <span class="font-medium" id="grand-total">0</span></p>
+                                </div>
+                                
                             </div>
                             <div>
                                 <form action="">
