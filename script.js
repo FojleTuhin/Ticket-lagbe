@@ -3,9 +3,12 @@ const allSeat = document.getElementsByClassName('seat');
 let totalSeatLeft = 40;
 let totalCount = 0;
 const arr = [];
+let cost=0;
 
 for (const seat of allSeat) {
   seat.addEventListener('click', function (e) {
+
+    
 
     if (arr.includes(seat)) {
       alert('Do not add same seat twice')
@@ -27,24 +30,34 @@ for (const seat of allSeat) {
         const li = document.createElement("li");
         const p = document.createElement("p");
         p.innerText = e.target.innerText;
-        const p1 = document.createElement("p");
-        p1.innerText = "Economy";
-        const p2 = document.createElement("p");
-        p2.innerText = 550;
+        const Economy = document.createElement("p");
+        Economy.innerText = "Economy";
+        const SinglePrice = document.createElement("p");
+        SinglePrice.innerText = 550;
 
+       
 
         li.appendChild(p)
-        li.appendChild(p1)
-        li.appendChild(p2)
+        li.appendChild(Economy)
+        li.appendChild(SinglePrice)
         elements.appendChild(li)
 
+        const totalPriceValue=document.getElementById('total-price')
+
+        cost= cost+550;
+        totalPriceValue.innerText=cost;
+
+
+     
       }
       else {
         alert("Sorry, You can't buy 5 or more ticket");
       }
+
+
+     
     }
 
-      
 
     
   })
