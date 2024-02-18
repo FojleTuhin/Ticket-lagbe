@@ -70,7 +70,7 @@ function coupon(totalCount) {
 function apply() {
 
   const totalPrice = document.getElementById('total-price').innerText;
-  const convertedTotalPrice=parseInt(totalPrice);
+  const convertedTotalPrice = parseInt(totalPrice);
 
   const discountValue = document.getElementById('discount');
   const grandTotalValue = document.getElementById('grand-total');
@@ -82,23 +82,31 @@ function apply() {
     const grandTotal = convertedTotalPrice - (convertedTotalPrice * 15) / 100;
     grandTotalValue.innerText = grandTotal;
 
-    const discountPrice= (convertedTotalPrice * 15) / 100;
-    discountValue.innerText=discountPrice;
+    const discountPrice = (convertedTotalPrice * 15) / 100;
+    discountValue.innerText = discountPrice;
   }
 
   else if (input === "Couple 20") {
     const grandTotal = convertedTotalPrice - (convertedTotalPrice * 20) / 100;
     grandTotalValue.innerText = grandTotal;
 
-    const discountPrice= (convertedTotalPrice * 20) / 100;
-    discountValue.innerText=discountPrice;
+    const discountPrice = (convertedTotalPrice * 20) / 100;
+    discountValue.innerText = discountPrice;
   }
-     else{
-      grandTotalValue.innerText=convertedTotalPrice;
-     }
+  else {
+    grandTotalValue.innerText = convertedTotalPrice;
+  }
 
 
 }
 
 
-console.log(input)
+function then(){
+  const home= document.getElementById('hello');
+  home.classList.add('hidden');
+}
+
+function continues(){
+  const home= document.getElementById('hello');
+  home.classList.remove('hidden');
+}
